@@ -1,0 +1,25 @@
+@import "./fonts/Helvetica-Neue/stylesheet.css";
+
+/* ---------- style globs ---------- */
+:root{
+    --color-black: #000;
+    --color-white: #fff;
+    --color-firebrick: firebrick;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: beige;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.container{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
