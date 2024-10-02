@@ -132,6 +132,7 @@ body{
     display: block;
 }
 
+/* ---------- section stateGit ---------- */
 /* section stateGit (состояние в Git) */
 .stateGit{
     width: 100%;
@@ -171,4 +172,32 @@ body{
 }
 .stateGit__list{
     margin-left: 20px;
+}
+/* End состояние в Git */
+
+.title-chapter{
+    margin: 20px 10px;
+    padding-left: 25px;
+    position: relative;
+}
+.title-chapter::before{
+    content: '\2714';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: firebrick;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-chapter a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
 }
