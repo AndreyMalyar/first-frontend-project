@@ -158,7 +158,83 @@
             </div>
         </div>
         <!-- End состояние в Git -->
-
+        <div class="container">
+            <!--git clone-->
+            <h3 class="title-chapter" id="clone">git clone</h3>
+            <p>Клонирует репозиторий из URL в новую директорию</p>
+            <div class="code">
+                <code>
+                    git clone "ссылка на репозиторий";
+                </code>
+                <p class="code__text">Создаться проект в папке &gt; {открыть эту папку в редакторе кода}</p>
+                <p class="code__text">Находится в состоянии неотслеживаемое (untracked). <br>Любое изменение файла переведет в состояние измененное (modified)</p>
+            </div>
+            <!--git branch-->
+            <h3 class="title-chapter" id="branch">git branch <a href="https://git-scm.com/book/ru/v2/%D0%92%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Git-%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D0%B5%D1%82%D0%BA%D0%B0%D0%BC%D0%B8" target="_blank">более подробно посмотреть список команд</a> </h3>
+            <p>Показывает, создает или удаляет ветки.</p>
+            <p>Создается ветка &lt;test&gt; или &lt;develop&gt; из нее кидать в ветку &lt;main&gt;</p>
+            <div class="code">
+                <code>
+                    git branch branch-name<br>
+                    git branch -a<br>
+                    git branch -v<br>
+                    git branch -D unneeded-branch-name<br>
+                    git branch --move bad-branch-name corrected-branch-name<br>
+                </code>
+                <p class="code__text">git branch &lt;название ветки&gt; - создает ветку с названием</p>
+                <p class="code__text">git branch -a - показывает названия веток + на какой находишься</p>
+                <p class="code__text">git branch -v - посмотреть последний коммит на каждой из веток</p>
+                <p class="code__text">git branch -D &lt;Название ветки&gt; - удалить ветку</p>
+                <p class="code__text">git branch --move - переименовать ветку</p>
+                <p class="code__text">Подсказка (origin/main - ветка которая находится удаленно (origin))</p>
+            </div>
+            <!--Switch branch-->
+            <h3 class="title-chapter" id="SwitchBranch">Switch branch</h3>
+            <p>Переключение между ветками.</p>
+            <div class="code">
+                <code>
+                    git checkout branch-name<br>
+                    git checkout -<br>
+                    git checkout -b branch-name<br>
+                </code>
+                <p class="code__text">git checkout &lt;branch-name&gt; - перейдет на ветку</p>
+                <p class="code__text">git checkout - – перейдет на предыдущую ветку</p>
+                <p class="code__text">git checkout -b &lt;branch-name&gt; - создаст и перейдет на ветку</p>
+            </div>
+            <!--Switch add-->
+            <h3 class="title-chapter" id="add">git add</h3>
+            <p>Добавляет файлы в индекс для следующего коммита.</p>
+            <div class="code">
+                <code>
+                    git add .<br>
+                </code>
+                <p class="code__text">переведет в состояние (подготовленное(staged)) все файлы из состояния (измененное (modified)) </p>
+            </div>
+            <!--git commit-->
+            <h3 class="title-chapter" id="commit">git commit</h3>
+            <p class="topIndent"><b>Коммит</b> — это основной объект в управлении контроля версий.<p>
+            <p class="topIndent">Он содержит все изменения за время этого коммита. Коммиты связаны между собой как односвязный список.</p>
+            <p class="topIndent">Добавляя понятные сообщения к каждому коммиту, вы (и другие) легко сможете увидеть, что изменилось и когда.</p>
+            <div class="code">
+                <code>
+                    git commit -m "feat: First release of Hello World!"<br>
+                </code>
+                <p class="code__text"><b>git commit</b> - команда для фиксации изменений.</p>
+                <p class="code__text"><b>-m "message"</b> - опция для добавления сообщения к коммиту.</p>
+                <p class="code__text"><b>feat:</b> создал</p>
+                <p class="code__text"><b>fix:</b> исправил</p>
+                <p class="code__text">переведет в состояние (закомиченное (committed))</p>
+            </div>
+            <!--git commit-->
+            <h3 class="title-chapter" id="mergeBranch">Merge branches</h3>
+            <p>Когда наш срочный фикс готов, мы можем объединить ветки. Сначала нужно переключиться на основную ветку (master)</p>
+            <div class="code">
+                <code>
+                    git merge branch-name<br>
+                </code>
+                <p class="code__text">Объединяем текущую ветку (master) с веткой &lt;branch-name&gt;</p>
+            </div>
+        </div>
 
     </section>
 </main>
